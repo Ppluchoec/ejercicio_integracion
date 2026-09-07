@@ -100,7 +100,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="EXrXyTK7rbdAVmL2yHDM" name="C4 - Nivel 2 - Contenedores">
-    <mxGraphModel dx="1414" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1178" dy="701" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -134,7 +134,7 @@
         <mxCell id="lqMck7_Yc4_Kj7zsVjNp-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Payment Hub&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: MotorPagos (&lt;/i&gt;&lt;i&gt;Kotlin&lt;/i&gt;&lt;i&gt;+ Oracle)]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Orquesta los esquemas de pago (ver diagrama de componentes, 8.3)" vertex="1">
           <mxGeometry height="120" width="240" x="1840" y="1810" as="geometry" />
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Registro de Propiedad de Cuentas&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: KV replicado, ej. Redis]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Mapea cuenta → core propietario, con versión de asignación creciente y estado operativo (activo/en migración). El registro central y la habilitación local de cada core se actualizan como operaciones separadas, no atómicas (7.1)" vertex="1">
+        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Registro de Propiedad de Cuentas&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: KV replicado, ej. Redis]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Mapea cuenta → core propietario, con versión de asignación creciente y estado operativo (activo/en migración). El registro central y la habilitación local de cada core se actualizan como operaciones separadas, no atómicas" vertex="1">
           <mxGeometry height="120" width="310" x="1460" y="1980" as="geometry" />
         </mxCell>
         <mxCell id="lqMck7_Yc4_Kj7zsVjNp-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Core Bancario Tradicional&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Procesamiento legado, mandatorio para ciertos productos (saldo, movimientos)" vertex="1">
