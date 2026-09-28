@@ -1,575 +1,1076 @@
-<mxfile host="Electron" pages="3">
-  <diagram name="C4 - Nivel 1 - Contexto" id="QBzwUeDVRdpgqvAGN5T8">
-    <mxGraphModel dx="1414" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+<mxfile host="Electron" pages="8">
+  <diagram id="c4-context-diagram" name="C4 - Nivel 1 - Contexto">
+    <mxGraphModel dx="4935" dy="3123" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1020" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="Pui9s6wA1yreJGq1TnLk-1" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;" value="Diagrama C4 – Nivel 1: Contexto del Sistema&lt;br&gt;&lt;i&gt;Modernización de Sistemas Bancarios&lt;/i&gt;" vertex="1">
-          <mxGeometry height="55" width="1830" x="410" y="540" as="geometry" />
+        <mxCell id="title" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;" value="Diagrama C4 – Nivel 1: Contexto del Sistema&lt;br&gt;&lt;i&gt;Modernización de Sistemas Bancarios&lt;/i&gt;" vertex="1">
+          <mxGeometry height="55" width="1830" x="-60" y="-90" as="geometry" />
         </mxCell>
-        <mxCell id="Pui9s6wA1yreJGq1TnLk-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=#052744;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Cliente&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Actor]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Usuario final que opera banca digital, o autoriza a un tercero actuar en su nombre vía Open Finance" vertex="1">
-          <mxGeometry height="160" width="220" x="400" y="1010" as="geometry" />
+        <mxCell id="p_cliente" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=#052744;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Cliente&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Actor]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Usuario final que opera banca digital, o autoriza a un tercero actuar en su nombre vía Open Finance" vertex="1">
+          <mxGeometry height="160" width="220" x="-70" y="380" as="geometry" />
         </mxCell>
-        <mxCell id="Pui9s6wA1yreJGq1TnLk-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=#0B4884;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Plataforma de Integración Bancaria&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema principal]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Permite originar y administrar productos, operar banca digital y procesar pagos, integrando el core tradicional con capacidades nuevas de riesgo, fraude e identidad" vertex="1">
-          <mxGeometry height="160" width="320" x="930" y="1010" as="geometry" />
+        <mxCell id="sys_central" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=#0B4884;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Plataforma de Integración Bancaria&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema principal]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Permite originar y administrar productos, operar banca digital y procesar pagos, integrando el core tradicional con capacidades nuevas de riesgo, fraude e identidad" vertex="1">
+          <mxGeometry height="160" width="320" x="460" y="380" as="geometry" />
         </mxCell>
-        <mxCell id="Pui9s6wA1yreJGq1TnLk-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Core Bancario Tradicional&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Sistema legado, mandatorio para productos no migrados al Core Bancario digital" vertex="1">
-          <mxGeometry height="110" width="260" x="1270" y="630" as="geometry" />
+        <mxCell id="ext_core" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Core Bancario Tradicional&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Sistema legado, mandatorio para productos no migrados al Core Bancario digital" vertex="1">
+          <mxGeometry height="110" width="260" x="800" as="geometry" />
         </mxCell>
-        <mxCell id="Pui9s6wA1yreJGq1TnLk-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Plataforma KYC&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Verifica identidad y cumplimiento regulatorio del cliente" vertex="1">
-          <mxGeometry height="110" width="260" x="1450" y="760" as="geometry" />
+        <mxCell id="ext_kyc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Plataforma KYC&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Verifica identidad y cumplimiento regulatorio del cliente" vertex="1">
+          <mxGeometry height="110" width="260" x="980" y="130" as="geometry" />
         </mxCell>
-        <mxCell id="Pui9s6wA1yreJGq1TnLk-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Motor de Riesgo&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Evalúa riesgo crediticio y operacional de clientes y operaciones" vertex="1">
-          <mxGeometry height="110" width="260" x="1610" y="890" as="geometry" />
+        <mxCell id="ext_riesgo" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Motor de Riesgo&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Evalúa riesgo crediticio y operacional de clientes y operaciones" vertex="1">
+          <mxGeometry height="110" width="260" x="1140" y="260" as="geometry" />
         </mxCell>
-        <mxCell id="Pui9s6wA1yreJGq1TnLk-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Motor de Detección de Fraude&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Detecta fraude en tiempo real y gestiona casos de investigación" vertex="1">
-          <mxGeometry height="110" width="260" x="1790" y="1035" as="geometry" />
+        <mxCell id="ext_fraude" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Motor de Detección de Fraude&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Detecta fraude en tiempo real y gestiona casos de investigación" vertex="1">
+          <mxGeometry height="110" width="260" x="1320" y="405" as="geometry" />
         </mxCell>
-        <mxCell id="Pui9s6wA1yreJGq1TnLk-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Rieles de Pago&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Redes de pago, comercios de recaudación y pagos, liquidación (ACH) y compensación" vertex="1">
-          <mxGeometry height="110" width="260" x="1610" y="1180" as="geometry" />
+        <mxCell id="ext_rieles" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Rieles de Pago&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Redes de pago, comercios de recaudación y pagos, liquidación (ACH) y compensación" vertex="1">
+          <mxGeometry height="110" width="260" x="1140" y="550" as="geometry" />
         </mxCell>
-        <mxCell id="Pui9s6wA1yreJGq1TnLk-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Plataforma IAM&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Gestiona identidad, credenciales y consentimientos" vertex="1">
-          <mxGeometry height="110" width="260" x="1450" y="1310" as="geometry" />
+        <mxCell id="ext_iam" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Plataforma IAM&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Gestiona identidad, credenciales y consentimientos" vertex="1">
+          <mxGeometry height="110" width="260" x="980" y="680" as="geometry" />
         </mxCell>
-        <mxCell id="Pui9s6wA1yreJGq1TnLk-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;fontColor=#333333;fillColor=#F5F5F5;strokeColor=#CCCCCC;spacing=8;" value="&lt;b&gt;Leyenda&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(8, 66, 123);&quot;&gt;■&lt;/span&gt; Actor&lt;br&gt;&lt;span style=&quot;color: rgb(17, 104, 189);&quot;&gt;■&lt;/span&gt;&amp;nbsp;Sistema en alcance&lt;br&gt;&lt;span style=&quot;color: rgb(153, 153, 153);&quot;&gt;■&lt;/span&gt; Sistema Externo" vertex="1">
-          <mxGeometry height="110" width="280" x="400" y="1530" as="geometry" />
+        <mxCell id="legend" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;fontColor=#333333;fillColor=#F5F5F5;strokeColor=#CCCCCC;spacing=8;" value="&lt;b&gt;Leyenda&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(8, 66, 123);&quot;&gt;■&lt;/span&gt; Actor&lt;br&gt;&lt;span style=&quot;color: rgb(17, 104, 189);&quot;&gt;■&lt;/span&gt;&amp;nbsp;Sistema en alcance&lt;br&gt;&lt;span style=&quot;color: rgb(153, 153, 153);&quot;&gt;■&lt;/span&gt; Sistema Externo" vertex="1">
+          <mxGeometry height="110" width="280" x="-70" y="900" as="geometry" />
         </mxCell>
-        <mxCell id="Pui9s6wA1yreJGq1TnLk-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Plataforma de Observabilidad&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Recibe métricas, logs y trazas de toda la plataforma" vertex="1">
-          <mxGeometry height="110" width="260" x="1270" y="1440" as="geometry" />
+        <mxCell id="ext_observ" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Plataforma de Observabilidad&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Recibe métricas, logs y trazas de toda la plataforma​" vertex="1">
+          <mxGeometry height="110" width="260" x="800" y="810" as="geometry" />
         </mxCell>
-        <mxCell id="Pui9s6wA1yreJGq1TnLk-12" edge="1" parent="1" source="Pui9s6wA1yreJGq1TnLk-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="Pui9s6wA1yreJGq1TnLk-3" value="Consulta y transacciona, directo o vía tercero autorizado&lt;br&gt;[HTTPS / API REST Open Finance]">
+        <mxCell id="e1" edge="1" parent="1" source="p_cliente" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="sys_central" value="Consulta y transacciona, directo o vía tercero autorizado&lt;br&gt;[HTTPS / API REST Open Finance]">
           <mxGeometry relative="1" y="-60" as="geometry">
             <mxPoint x="-1" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Pui9s6wA1yreJGq1TnLk-13" edge="1" parent="1" source="Pui9s6wA1yreJGq1TnLk-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="Pui9s6wA1yreJGq1TnLk-4" value="Lee y escribe productos no migrados&lt;br&gt;[API / Batch]">
+        <mxCell id="e3" edge="1" parent="1" source="sys_central" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="ext_core" value="Lee y escribe productos no migrados&lt;br&gt;[API / Batch]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1020.07" y="840.0699999999999" />
-              <mxPoint x="1400.0700000000002" y="840.0699999999999" />
+              <mxPoint x="550.07" y="210.07" />
+              <mxPoint x="930.07" y="210.07" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Pui9s6wA1yreJGq1TnLk-14" edge="1" parent="1" source="Pui9s6wA1yreJGq1TnLk-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="Pui9s6wA1yreJGq1TnLk-5" value="Verifica identidad y cumplimiento&lt;br&gt;[API]">
+        <mxCell id="e4" edge="1" parent="1" source="sys_central" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="ext_kyc" value="Verifica identidad y cumplimiento&lt;br&gt;[API]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1110.0700000000002" y="940.0699999999999" />
-              <mxPoint x="1510.07" y="940.0699999999999" />
+              <mxPoint x="640.07" y="310.07" />
+              <mxPoint x="1040.07" y="310.07" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Pui9s6wA1yreJGq1TnLk-15" edge="1" parent="1" source="Pui9s6wA1yreJGq1TnLk-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="Pui9s6wA1yreJGq1TnLk-6" value="Solicita evaluación de riesgo&lt;br&gt;[API síncrona]">
+        <mxCell id="e5" edge="1" parent="1" source="sys_central" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="ext_riesgo" value="Solicita evaluación de riesgo&lt;br&gt;[API síncrona]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1740.07" y="1050.07" />
+              <mxPoint x="1270.07" y="420.07" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Pui9s6wA1yreJGq1TnLk-16" edge="1" parent="1" source="Pui9s6wA1yreJGq1TnLk-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="Pui9s6wA1yreJGq1TnLk-7" value="Solicita score de fraude&lt;br&gt;[API baja latencia]">
+        <mxCell id="e6" edge="1" parent="1" source="sys_central" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="ext_fraude" value="Solicita score de fraude&lt;br&gt;[API baja latencia]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1720" y="1090.07" />
-              <mxPoint x="1720" y="1090.07" />
+              <mxPoint x="1250" y="460.07" />
+              <mxPoint x="1250" y="460.07" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Pui9s6wA1yreJGq1TnLk-17" edge="1" parent="1" source="Pui9s6wA1yreJGq1TnLk-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="Pui9s6wA1yreJGq1TnLk-8" value="Enruta y liquida pagos&lt;br&gt;[ISO 20022 / API]">
+        <mxCell id="e7" edge="1" parent="1" source="sys_central" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="ext_rieles" value="Enruta y liquida pagos&lt;br&gt;[ISO 20022 / API]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1740.07" y="1130.07" />
+              <mxPoint x="1270.07" y="500.07" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Pui9s6wA1yreJGq1TnLk-18" edge="1" parent="1" source="Pui9s6wA1yreJGq1TnLk-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="Pui9s6wA1yreJGq1TnLk-9" value="Autentica y autoriza&lt;br&gt;[OAuth2 / OIDC]">
+        <mxCell id="e8" edge="1" parent="1" source="sys_central" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="ext_iam" value="Autentica y autoriza&lt;br&gt;[OAuth2 / OIDC]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1110.0700000000002" y="1229.9299999999998" />
-              <mxPoint x="1510.07" y="1229.9299999999998" />
+              <mxPoint x="640.07" y="599.93" />
+              <mxPoint x="1040.07" y="599.93" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Pui9s6wA1yreJGq1TnLk-19" edge="1" parent="1" source="Pui9s6wA1yreJGq1TnLk-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="Pui9s6wA1yreJGq1TnLk-11" value="Envía métricas, logs y trazas&lt;br&gt;[OTLP]">
+        <mxCell id="e9" edge="1" parent="1" source="sys_central" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="ext_observ" value="Envía métricas, logs y trazas&lt;br&gt;[OTLP]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1020.07" y="1330.0700000000002" />
-              <mxPoint x="1400.0700000000002" y="1330.0700000000002" />
+              <mxPoint x="550.07" y="700.07" />
+              <mxPoint x="930.07" y="700.07" />
             </Array>
           </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="EXrXyTK7rbdAVmL2yHDM" name="C4 - Nivel 2 - Contenedores">
-    <mxGraphModel dx="1178" dy="701" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <diagram id="c4-container-diagram" name="C4 - Nivel 2 - Contenedores">
+    <mxGraphModel dx="3414" dy="2069" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1750" pageHeight="1080" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-1" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;" value="Diagrama C4 – Nivel 2: Contenedores (v2)&lt;br&gt;&lt;i&gt;Enrutamiento único vía API Gateway&lt;/i&gt;" vertex="1">
-          <mxGeometry height="45" width="3490" x="190" y="590" as="geometry" />
+        <mxCell id="title2" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;" value="Diagrama C4 – Nivel 2: Contenedores (v2)&lt;br&gt;&lt;i&gt;Enrutamiento único vía API Gateway&lt;/i&gt;" vertex="1">
+          <mxGeometry height="45" width="3490" x="-230" y="-390" as="geometry" />
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;verticalAlign=top;align=left;fontSize=13;fontStyle=2;spacing=10;" value="Plataforma de Integración Bancaria&lt;br&gt;&lt;i&gt;[Sistema principal]&lt;/i&gt;" vertex="1">
-          <mxGeometry height="1230" width="1690" x="590" y="890" as="geometry" />
+        <mxCell id="boundary" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;verticalAlign=top;align=left;fontSize=13;fontStyle=2;spacing=10;" value="Plataforma de Integración Bancaria&lt;br&gt;&lt;i&gt;[Sistema principal]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="1230" width="1690" x="170" y="-90" as="geometry" />
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=#052744;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Cliente&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Actor]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Usuario final, que opera directo o vía tercero autorizado (Open Finance)" vertex="1">
-          <mxGeometry height="140" width="200" x="200" y="1405" as="geometry" />
+        <mxCell id="p_cliente" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=#052744;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Cliente&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Actor]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Usuario final, que opera directo o vía tercero autorizado (Open Finance)" vertex="1">
+          <mxGeometry height="140" width="200" x="-220" y="425" as="geometry" />
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Aplicación Web&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: SPA]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Canal navegador" vertex="1">
-          <mxGeometry height="100" width="200" x="660" y="1000" as="geometry" />
+        <mxCell id="c_webapp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Aplicación Web&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: SPA]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Canal navegador" vertex="1">
+          <mxGeometry height="100" width="200" x="240" y="20" as="geometry" />
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Aplicación Móvil&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: iOS/Android]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Canal app nativa" vertex="1">
-          <mxGeometry height="100" width="200" x="670" y="1940" as="geometry" />
+        <mxCell id="c_mobileapp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Aplicación Móvil&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: iOS/Android]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Canal app nativa" vertex="1">
+          <mxGeometry height="100" width="200" x="250" y="960" as="geometry" />
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;API Gateway&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: API Management]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Enrutamiento, autenticación L7 y rate-limiting." vertex="1">
-          <mxGeometry height="120" width="220" x="1160" y="1480" as="geometry" />
+        <mxCell id="c_gateway" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;API Gateway&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: API Management]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Enrutamiento, autenticación L7 y rate-limiting." vertex="1">
+          <mxGeometry height="120" width="220" x="740" y="500" as="geometry" />
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Core Bancario Digital&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: CoreBanking Digital(Java spring + Oracle)]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Administra productos y cuentas nuevos y migrados bajo su propiedad (Strangler Fig)" vertex="1">
-          <mxGeometry height="110" width="240" x="1530" y="920" as="geometry" />
+        <mxCell id="c_coredigital" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Core Bancario Digital&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: CoreBanking Digital(Java spring + Oracle)]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Administra productos y cuentas nuevos y migrados bajo su propiedad (Strangler Fig)" vertex="1">
+          <mxGeometry height="110" width="240" x="1110" y="-60" as="geometry" />
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Event Bus&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: Apache Kafka]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Recibe eventos vía outbox transaccional. Reintentos, DLQ, particionado" vertex="1">
-          <mxGeometry height="110" width="240" x="1840" y="1180" as="geometry" />
+        <mxCell id="c_eventbus" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Event Bus&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: Apache Kafka]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Recibe eventos vía outbox transaccional. Reintentos, DLQ, particionado" vertex="1">
+          <mxGeometry height="110" width="240" x="1420" y="200" as="geometry" />
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-9" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=11;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Vista Agregada de Cliente&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: Read Model]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Vista consolidada multi-core, alimentada por eventos" vertex="1">
-          <mxGeometry height="130" width="240" x="2010" y="1475" as="geometry" />
+        <mxCell id="c_readmodel" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=11;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Vista Agregada de Cliente&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: Read Model]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Vista consolidada multi-core, alimentada por eventos" vertex="1">
+          <mxGeometry height="130" width="240" x="1590" y="495" as="geometry" />
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Payment Hub&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: MotorPagos (&lt;/i&gt;&lt;i&gt;Kotlin&lt;/i&gt;&lt;i&gt;+ Oracle)]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Orquesta los esquemas de pago (ver diagrama de componentes, 8.3)" vertex="1">
-          <mxGeometry height="120" width="240" x="1840" y="1810" as="geometry" />
+        <mxCell id="c_paymenthub" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Payment Hub&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: MotorPagos (&lt;/i&gt;&lt;i&gt;Kotlin&lt;/i&gt;&lt;i&gt;+ Oracle)]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Orquesta los esquemas de pago (ver diagrama de componentes, 8.3)" vertex="1">
+          <mxGeometry height="120" width="240" x="1420" y="830" as="geometry" />
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Registro de Propiedad de Cuentas&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: KV replicado, ej. Redis]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Mapea cuenta → core propietario, con versión de asignación creciente y estado operativo (activo/en migración). El registro central y la habilitación local de cada core se actualizan como operaciones separadas, no atómicas" vertex="1">
-          <mxGeometry height="120" width="310" x="1460" y="1980" as="geometry" />
+        <mxCell id="c_ownreg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Registro de Propiedad de Cuentas&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: KV replicado, ej. Redis]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Mapea cuenta → core propietario, con versión de asignación creciente y estado operativo (activo/en migración). El registro central y la habilitación local de cada core se actualizan como operaciones separadas, no atómicas (7.1)" vertex="1">
+          <mxGeometry height="120" width="310" x="1040" y="1000" as="geometry" />
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Core Bancario Tradicional&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Procesamiento legado, mandatorio para ciertos productos (saldo, movimientos)" vertex="1">
-          <mxGeometry height="110" width="290" x="2570" y="710" as="geometry" />
+        <mxCell id="ext_core" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Core Bancario Tradicional&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Procesamiento legado, mandatorio para ciertos productos (saldo, movimientos)" vertex="1">
+          <mxGeometry height="110" width="290" x="2150" y="-270" as="geometry" />
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Plataforma KYC&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Identidad, cumplimiento y sanciones/PEP" vertex="1">
-          <mxGeometry height="110" width="290" x="2810" y="920" as="geometry" />
+        <mxCell id="ext_kyc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Plataforma KYC&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Identidad, cumplimiento y sanciones/PEP" vertex="1">
+          <mxGeometry height="110" width="290" x="2390" y="-60" as="geometry" />
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Motor de Riesgo&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Riesgo crediticio y operacional" vertex="1">
-          <mxGeometry height="110" width="290" x="3040" y="1190" as="geometry" />
+        <mxCell id="ext_riesgo" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Motor de Riesgo&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Riesgo crediticio y operacional" vertex="1">
+          <mxGeometry height="110" width="290" x="2620" y="210" as="geometry" />
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Motor de Detección de Fraude&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Detección y casos de fraude" vertex="1">
-          <mxGeometry height="110" width="290" x="3400" y="1415" as="geometry" />
+        <mxCell id="ext_fraude" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Motor de Detección de Fraude&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Detección y casos de fraude" vertex="1">
+          <mxGeometry height="110" width="290" x="2980" y="435" as="geometry" />
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Rieles de Pago&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;div&gt;&lt;i&gt;&lt;br&gt;&lt;/i&gt;ISO20022, ISO8583, ACH&lt;/div&gt;" vertex="1">
-          <mxGeometry height="110" width="290" x="3040" y="1680" as="geometry" />
+        <mxCell id="ext_rieles" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Rieles de Pago&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;div&gt;&lt;i&gt;&lt;br&gt;&lt;/i&gt;ISO20022, ISO8583, ACH&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="290" x="2620" y="700" as="geometry" />
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Plataforma IAM&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Identidad, tokens y consentimientos" vertex="1">
-          <mxGeometry height="110" width="290" x="2750" y="1940" as="geometry" />
+        <mxCell id="ext_iam" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Plataforma IAM&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Identidad, tokens y consentimientos" vertex="1">
+          <mxGeometry height="110" width="290" x="2330" y="960" as="geometry" />
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Plataforma de Observabilidad&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;div&gt;&lt;i&gt;&lt;br&gt;&lt;/i&gt;Recibe métricas, logs y trazas de todos los containers&lt;/div&gt;" vertex="1">
-          <mxGeometry height="110" width="290" x="2510" y="2130" as="geometry" />
+        <mxCell id="ext_observ" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Plataforma de Observabilidad&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;&lt;div&gt;&lt;i&gt;&lt;br&gt;&lt;/i&gt;Recibe métricas, logs y trazas de todos los containers​&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="290" x="2090" y="1150" as="geometry" />
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-19" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-4" value="Usa banca digital (navegador)&lt;br&gt;[HTTPS]">
+        <mxCell id="e1" edge="1" parent="1" source="p_cliente" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="c_webapp" value="Usa banca digital (navegador)&lt;br&gt;[HTTPS]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="300" y="1050.14" />
+              <mxPoint x="-120" y="70.14" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-20" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-5" value="Usa banca digital (app nativa)&lt;br&gt;[HTTPS]">
+        <mxCell id="e2" edge="1" parent="1" source="p_cliente" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="c_mobileapp" value="Usa banca digital (app nativa)&lt;br&gt;[HTTPS]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="300" y="1990.1399999999999" />
+              <mxPoint x="-120" y="1010.14" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-21" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" target="lqMck7_Yc4_Kj7zsVjNp-6" value="Delegación Open Finance vía tercero autorizado&lt;br&gt;[API REST / Open Finance]">
+        <mxCell id="e3" edge="1" parent="1" source="p_cliente" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" target="c_gateway" value="Delegación Open Finance vía tercero autorizado&lt;br&gt;[API REST / Open Finance]">
           <mxGeometry relative="1" x="-0.3668" y="20" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="350" y="1650" />
-              <mxPoint x="1190" y="1650" />
+              <mxPoint x="-70" y="670" />
+              <mxPoint x="770" y="670" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-22" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-50" value="[HTTPS/GraphQL]">
+        <mxCell id="e4" edge="1" parent="1" source="c_webapp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="c_bff" value="[HTTPS/GraphQL]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="760" y="1370" />
-              <mxPoint x="760" y="1370" />
+              <mxPoint x="340" y="390" />
+              <mxPoint x="340" y="390" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-23" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-50" value="[HTTPS/GraphQL]">
+        <mxCell id="e5" edge="1" parent="1" source="c_mobileapp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="c_bff" value="[HTTPS/GraphQL]">
           <mxGeometry relative="1" x="-0.0958" as="geometry">
             <mxPoint y="1" as="offset" />
             <Array as="points">
-              <mxPoint x="770" y="1670" />
-              <mxPoint x="770" y="1670" />
+              <mxPoint x="350" y="690" />
+              <mxPoint x="350" y="690" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-24" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-6" value="Invoca APIs de negocio [API interna]">
+        <mxCell id="e6" edge="1" parent="1" source="c_bff" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="c_gateway" value="Invoca APIs de negocio [API interna]">
           <mxGeometry relative="1" x="-0.0233" y="30" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="1050" y="1540" />
-              <mxPoint x="1050" y="1540" />
+              <mxPoint x="630" y="560" />
+              <mxPoint x="630" y="560" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-25" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-7" value="Enruta (productos bajo su propiedad)&lt;br&gt;[API REST]">
+        <mxCell id="e7" edge="1" parent="1" source="c_gateway" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="c_coredigital" value="Enruta (productos bajo su propiedad)&lt;br&gt;[API REST]">
           <mxGeometry relative="1" x="-0.1553" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="1230" y="975" />
+              <mxPoint x="810" y="-5" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-26" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-12" value="Enruta (productos legados)&lt;br&gt;[API / Batch]">
+        <mxCell id="e8" edge="1" parent="1" source="c_gateway" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="ext_core" value="Enruta (productos legados)&lt;br&gt;[API / Batch]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1290" y="750" />
+              <mxPoint x="870" y="-230" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-27" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-10" value="Enruta operaciones de pago&lt;br&gt;[API REST]">
+        <mxCell id="e9" edge="1" parent="1" source="c_gateway" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="c_paymenthub" value="Enruta operaciones de pago&lt;br&gt;[API REST]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1290" y="1860" />
+              <mxPoint x="870" y="880" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-28" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-9" value="Consulta vista consolidada multi-core&lt;br&gt;[Consulta]">
+        <mxCell id="e10" edge="1" parent="1" source="c_gateway" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="c_readmodel" value="Consulta vista consolidada multi-core&lt;br&gt;[Consulta]">
           <mxGeometry relative="1" x="0.0476" y="20" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="1850" y="1540" />
-              <mxPoint x="1850" y="1540" />
+              <mxPoint x="1430" y="560" />
+              <mxPoint x="1430" y="560" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-29" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-17" value="Autentica y autoriza&lt;br&gt;[OAuth2 / OIDC]">
+        <mxCell id="e11" edge="1" parent="1" source="c_gateway" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="ext_iam" value="Autentica y autoriza&lt;br&gt;[OAuth2 / OIDC]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1340" y="1660" />
-              <mxPoint x="2405" y="1660" />
-              <mxPoint x="2405" y="1995" />
+              <mxPoint x="920" y="680" />
+              <mxPoint x="1985" y="680" />
+              <mxPoint x="1985" y="1015" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-30" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#333333;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-13" value="Enruta solicitudes de derechos del titular&lt;br&gt;[API]">
+        <mxCell id="e29" edge="1" parent="1" source="c_gateway" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#333333;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="ext_kyc" value="Enruta solicitudes de derechos del titular&lt;br&gt;[API]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1370" y="1630" />
-              <mxPoint x="2955" y="1630" />
+              <mxPoint x="950" y="650" />
+              <mxPoint x="2535" y="650" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-31" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-15" value="Screening operaciones sensibles del canal&lt;br&gt;[API baja latencia]">
+        <mxCell id="e12" edge="1" parent="1" source="c_gateway" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="ext_fraude" value="Screening operaciones sensibles del canal&lt;br&gt;[API baja latencia]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1340" y="1350" />
-              <mxPoint x="2320" y="1350" />
-              <mxPoint x="2320" y="1480" />
+              <mxPoint x="920" y="370" />
+              <mxPoint x="1900" y="370" />
+              <mxPoint x="1900" y="500" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-32" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-13" value="Verifica identidad y cumplimiento en originación&lt;br&gt;[API]">
+        <mxCell id="e13" edge="1" parent="1" source="c_coredigital" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="ext_kyc" value="Verifica identidad y cumplimiento en originación&lt;br&gt;[API]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1740" y="1075" />
-              <mxPoint x="2840" y="1075" />
+              <mxPoint x="1320" y="95" />
+              <mxPoint x="2420" y="95" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-33" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-14" value="Solicita evaluación de riesgo crediticio&lt;br&gt;[API síncrona]">
+        <mxCell id="e14" edge="1" parent="1" source="c_coredigital" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="ext_riesgo" value="Solicita evaluación de riesgo crediticio&lt;br&gt;[API síncrona]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1680" y="1140" />
-              <mxPoint x="2980" y="1140" />
-              <mxPoint x="2980" y="1245" />
+              <mxPoint x="1260" y="160" />
+              <mxPoint x="2560" y="160" />
+              <mxPoint x="2560" y="265" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-34" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#333333;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-7" value="Reserva/debita/acredita (productos bajo su propiedad)&lt;br&gt;[API síncrona]">
+        <mxCell id="e15" edge="1" parent="1" source="c_paymenthub" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#333333;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="c_coredigital" value="Reserva/debita/acredita (productos bajo su propiedad)&lt;br&gt;[API síncrona]">
           <mxGeometry relative="1" x="-0.7736" y="-40" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="1590" y="1840" />
+              <mxPoint x="1170" y="860" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-35" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#333333;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-12" value="Reserva/debita/acredita (productos legados)&lt;br&gt;[API síncrona]">
+        <mxCell id="e16" edge="1" parent="1" source="c_paymenthub" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#333333;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="ext_core" value="Reserva/debita/acredita (productos legados)&lt;br&gt;[API síncrona]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="2715" y="1840" />
+              <mxPoint x="2295" y="860" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-36" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-14" value="Valida límites y riesgo operacional&lt;br&gt;[API síncrona]">
+        <mxCell id="e17" edge="1" parent="1" source="c_paymenthub" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="ext_riesgo" value="Valida límites y riesgo operacional&lt;br&gt;[API síncrona]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="2980" y="1880" />
-              <mxPoint x="2980" y="1350" />
-              <mxPoint x="3185" y="1350" />
+              <mxPoint x="2560" y="900" />
+              <mxPoint x="2560" y="370" />
+              <mxPoint x="2765" y="370" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-37" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-15" value="Solicita score de fraude en tiempo real&lt;br&gt;[API baja latencia]">
+        <mxCell id="e18" edge="1" parent="1" source="c_paymenthub" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="ext_fraude" value="Solicita score de fraude en tiempo real&lt;br&gt;[API baja latencia]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="3545" y="1910" />
+              <mxPoint x="3125" y="930" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-38" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-13" value="Verifica sanciones/PEP&lt;br&gt;[API]">
+        <mxCell id="e19" edge="1" parent="1" source="c_paymenthub" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="ext_kyc" value="Verifica sanciones/PEP&lt;br&gt;[API]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="2880" y="1860" />
+              <mxPoint x="2460" y="880" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-39" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-16" value="Enruta y liquida (transferencias externas)&lt;br&gt;[ISO 20022 / API]">
+        <mxCell id="e20" edge="1" parent="1" source="c_paymenthub" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="ext_rieles" value="Enruta y liquida (transferencias externas)&lt;br&gt;[ISO 20022 / API]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1930" y="1730" />
+              <mxPoint x="1510" y="750" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-40" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-8" value="Publica eventos (outbox transaccional)&lt;br&gt;[Evento]">
+        <mxCell id="e21" edge="1" parent="1" source="c_coredigital" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="c_eventbus" value="Publica eventos (outbox transaccional)&lt;br&gt;[Evento]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1630" y="1235" />
+              <mxPoint x="1210" y="255" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-41" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-8" value="Publica eventos vía CDC&lt;br&gt;[Evento]">
+        <mxCell id="e22" edge="1" parent="1" source="ext_core" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="c_eventbus" value="Publica eventos vía CDC&lt;br&gt;[Evento]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1960" y="780" />
+              <mxPoint x="1540" y="-200" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-42" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-8" value="Publica eventos (outbox transaccional)&lt;br&gt;[Evento]">
+        <mxCell id="e23" edge="1" parent="1" source="c_paymenthub" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="c_eventbus" value="Publica eventos (outbox transaccional)&lt;br&gt;[Evento]">
           <mxGeometry relative="1" x="-0.6154" y="10" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="1870" y="1430" />
-              <mxPoint x="1870" y="1430" />
+              <mxPoint x="1450" y="450" />
+              <mxPoint x="1450" y="450" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-43" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-9" value="Actualiza vista de lectura&lt;br&gt;[Evento]">
+        <mxCell id="e24" edge="1" parent="1" source="c_eventbus" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="c_readmodel" value="Actualiza vista de lectura&lt;br&gt;[Evento]">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-44" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#333333;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-11" value="Consulta propietario, versión y estado [API]">
+        <mxCell id="e25" edge="1" parent="1" source="c_gateway" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#333333;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="c_ownreg" value="Consulta propietario, versión y estado [API]">
           <mxGeometry relative="1" x="0.0988" y="-10" as="geometry">
             <mxPoint x="-1" as="offset" />
             <Array as="points">
-              <mxPoint x="1250" y="1910" />
-              <mxPoint x="1580" y="1910" />
+              <mxPoint x="830" y="930" />
+              <mxPoint x="1160" y="930" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-45" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#333333;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-11" value="Consulta propietario, versión y estado [API]">
+        <mxCell id="e26" edge="1" parent="1" source="c_paymenthub" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#333333;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="c_ownreg" value="Consulta propietario, versión y estado [API]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1940" y="2035" />
+              <mxPoint x="1520" y="1055" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-46" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-18" value="Envía telemetría (representativo, todos los containers instrumentan igual)&lt;br&gt;[OTLP]">
+        <mxCell id="e27" edge="1" parent="1" source="c_gateway" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="ext_observ" value="Envía telemetría (representativo, todos los containers instrumentan igual)&lt;br&gt;[OTLP]">
           <mxGeometry relative="1" x="-0.0052" y="-20" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="1220" y="2220" />
+              <mxPoint x="800" y="1240" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-47" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="lqMck7_Yc4_Kj7zsVjNp-18" value="Consume y conserva historial de interacción [Evento]">
+        <mxCell id="e28" edge="1" parent="1" source="c_eventbus" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;align=center;verticalAlign=middle;labelBackgroundColor=#FFFFFF;" target="ext_observ" value="Consume y conserva historial de interacción [Evento]">
           <mxGeometry relative="1" x="-0.5242" y="10" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="2380" y="1270" />
-              <mxPoint x="2380" y="2185" />
+              <mxPoint x="1960" y="290" />
+              <mxPoint x="1960" y="1205" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-48" edge="1" parent="1" source="lqMck7_Yc4_Kj7zsVjNp-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="lqMck7_Yc4_Kj7zsVjNp-8">
+        <mxCell id="CQ7UC2c6Tl8DH_zZ-5RC-2" edge="1" parent="1" source="c_bff" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="c_eventbus">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="835.06" y="1262.53" />
+              <mxPoint x="415.06" y="282.53" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-49" connectable="0" parent="lqMck7_Yc4_Kj7zsVjNp-48" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Publica eventos de interacción [Evento]" vertex="1">
+        <mxCell id="CQ7UC2c6Tl8DH_zZ-5RC-3" connectable="0" parent="CQ7UC2c6Tl8DH_zZ-5RC-2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Publica eventos de interacción [Evento]" vertex="1">
           <mxGeometry relative="1" x="-0.1953" y="-3" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-50" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;BFF Canal Digital&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: Node.js]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Sesión (JWT, sin estado de servidor) y agregación de presentación para web/móvil" vertex="1">
-          <mxGeometry height="120" width="220" x="725" y="1470" as="geometry" />
+        <mxCell id="c_bff" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;BFF Canal Digital&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: Node.js]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Sesión (JWT, sin estado de servidor) y agregación de presentación para web/móvil" vertex="1">
+          <mxGeometry height="120" width="220" x="305" y="490" as="geometry" />
         </mxCell>
-        <mxCell id="lqMck7_Yc4_Kj7zsVjNp-51" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;fontColor=#333333;fillColor=#F5F5F5;strokeColor=#CCCCCC;spacing=8;" value="&lt;b&gt;Leyenda&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(8, 66, 123);&quot;&gt;■&lt;/span&gt; Actor&lt;br&gt;&lt;span style=&quot;color: rgb(17, 104, 189);&quot;&gt;■&lt;/span&gt;&amp;nbsp;Sistema en alcance&lt;br&gt;&lt;span style=&quot;color: rgb(153, 153, 153);&quot;&gt;■&lt;/span&gt; Sistema Externo" vertex="1">
-          <mxGeometry height="110" width="280" x="180" y="2280" as="geometry" />
+        <mxCell id="FQ4CzT91-KAL4H_oToU9-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=12;fontColor=#333333;fillColor=#F5F5F5;strokeColor=#CCCCCC;spacing=8;" value="&lt;b&gt;Leyenda&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(8, 66, 123);&quot;&gt;■&lt;/span&gt; Actor&lt;br&gt;&lt;span style=&quot;color: rgb(17, 104, 189);&quot;&gt;■&lt;/span&gt;&amp;nbsp;Sistema en alcance&lt;br&gt;&lt;span style=&quot;color: rgb(153, 153, 153);&quot;&gt;■&lt;/span&gt; Sistema Externo" vertex="1">
+          <mxGeometry height="110" width="280" x="-240" y="1300" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="mVKUfjuhS19xGn9Wi_7D" name="C4 - Nivel 3 - Componentes Payment Hub">
-    <mxGraphModel dx="2571" dy="1529" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <diagram id="c4-component-paymenthub" name="C4 - Nivel 3 - Componentes Payment Hub">
+    <mxGraphModel dx="1178" dy="1601" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1560" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="RNOovXjiGSu3f4s4odDM-1" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;" value="Diagrama C4 – Nivel 3: Componentes de Payment Hub&lt;br&gt;&lt;i&gt;Incluye dependencias externas del contenedor&lt;/i&gt;" vertex="1">
-          <mxGeometry height="45" width="2345" x="310" y="690" as="geometry" />
+        <mxCell id="title3" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;" value="Diagrama C4 – Nivel 3: Componentes de Payment Hub&lt;br&gt;&lt;i&gt;Incluye dependencias externas del contenedor&lt;/i&gt;" vertex="1">
+          <mxGeometry height="45" width="2345" x="20" y="-420" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;verticalAlign=top;align=left;fontSize=13;fontStyle=2;spacing=10;" value="Payment Hub  [Contenedor&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;]&lt;/span&gt;" vertex="1">
-          <mxGeometry height="1150" width="1450" x="310" y="1030" as="geometry" />
+        <mxCell id="boundary3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;verticalAlign=top;align=left;fontSize=13;fontStyle=2;spacing=10;" value="Payment Hub  [Contenedor]" vertex="1">
+          <mxGeometry height="1150" width="1450" x="20" y="-80" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Payment Initiation Controller&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Recibe la orden desde el API Gateway y valida el esquema" vertex="1">
-          <mxGeometry height="130" width="230" x="350" y="1100" as="geometry" />
+        <mxCell id="k_pic" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Payment Initiation Controller&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Recibe la orden desde el API Gateway y valida el esquema" vertex="1">
+          <mxGeometry height="130" width="230" x="60" y="-10" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Idempotency Guard&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Verifica la clave de idempotencia; si ya existe con estado en curso, rechaza la solicitud concurrente en vez de procesarla en paralelo" vertex="1">
-          <mxGeometry height="130" width="230" x="660" y="1100" as="geometry" />
+        <mxCell id="k_idem" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Idempotency Guard&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Verifica la clave de idempotencia; si ya existe con estado en curso, rechaza la solicitud concurrente en vez de procesarla en paralelo" vertex="1">
+          <mxGeometry height="130" width="230" x="370" y="-10" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Validation &amp;amp; Compliance Orchestrator&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Coordina el esquema: llama riesgo, fraude y sanciones en paralelo" vertex="1">
-          <mxGeometry height="130" width="250" x="880" y="1310" as="geometry" />
+        <mxCell id="k_vco" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Validation &amp;amp; Compliance Orchestrator&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Coordina el esquema: llama riesgo, fraude y sanciones en paralelo" vertex="1">
+          <mxGeometry height="130" width="250" x="590" y="200" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Ledger Adapter&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Reserva/debita/acredita en el core propietario vía su API, con clave de operación estable; ante timeout consulta estado antes de reintentar (nunca reintenta a ciegas)" vertex="1">
-          <mxGeometry height="130" width="230" x="1180" y="1088" as="geometry" />
+        <mxCell id="k_ledger" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Ledger Adapter&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Reserva/debita/acredita en el core propietario vía su API, con clave de operación estable; ante timeout consulta estado antes de reintentar (nunca reintenta a ciegas)" vertex="1">
+          <mxGeometry height="130" width="230" x="890" y="-22" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Payment Execution Engine&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Ejecuta el esquema: aplica el resultado, confirma o compensa" vertex="1">
-          <mxGeometry height="130" width="230" x="650" y="1495" as="geometry" />
+        <mxCell id="k_pee" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Payment Execution Engine&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Ejecuta el esquema: aplica el resultado, confirma o compensa" vertex="1">
+          <mxGeometry height="130" width="230" x="360" y="385" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Rail Router&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Selecciona y enruta al riel de pago correspondiente" vertex="1">
-          <mxGeometry height="130" width="250" x="1010" y="1580" as="geometry" />
+        <mxCell id="k_rail" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Rail Router&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Selecciona y enruta al riel de pago correspondiente" vertex="1">
+          <mxGeometry height="130" width="250" x="720" y="470" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-9" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=10;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Idempotency Store&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente: DB]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Tabla separada en el mismo instancia Oracle de Payment Hub. Persiste claves procesadas (TTL definido)" vertex="1">
-          <mxGeometry height="150" width="230" x="350" y="1750" as="geometry" />
+        <mxCell id="k_idemstore" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=10;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Idempotency Store&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente: DB]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Tabla separada en el mismo instancia Oracle de Payment Hub. Persiste claves procesadas (TTL definido)" vertex="1">
+          <mxGeometry height="150" width="230" x="60" y="640" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-10" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=10;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Payment Store&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente: DB]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Mismo instancia Oracle de Payment Hub: tabla de estado del esquema + tabla outbox, escritas juntas en una transacción" vertex="1">
-          <mxGeometry height="150" width="280" x="630" y="1750" as="geometry" />
+        <mxCell id="k_paystore" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=10;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Payment Store&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente: DB]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Mismo instancia Oracle de Payment Hub: tabla de estado del esquema + tabla outbox, escritas juntas en una transacción" vertex="1">
+          <mxGeometry height="150" width="280" x="340" y="640" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Outbox Publisher&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Sondea (poll) la tabla outbox de forma asíncrona y publica al Event Bus, con reintentos" vertex="1">
-          <mxGeometry height="150" width="250" x="1010" y="1750" as="geometry" />
+        <mxCell id="k_outbox" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Outbox Publisher&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Sondea (poll) la tabla outbox de forma asíncrona y publica al Event Bus, con reintentos" vertex="1">
+          <mxGeometry height="150" width="250" x="720" y="640" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;ACL Core Tradicional&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Traduce las llamadas de Ledger Adapter a la API del Core Tradicional; añade operationId idempotente y consulta de estado que el legado no soporta nativamente (13.3)" vertex="1">
-          <mxGeometry height="130" width="230" x="1500" y="1170" as="geometry" />
+        <mxCell id="k_acl" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;ACL Core Tradicional&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Traduce las llamadas de Ledger Adapter a la API del Core Tradicional; añade operationId idempotente y consulta de estado que el legado no soporta nativamente (13.3)" vertex="1">
+          <mxGeometry height="130" width="230" x="1210" y="60" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Registro de Propiedad de Cuentas&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Container, ver 8.2]&lt;/i&gt;" vertex="1">
-          <mxGeometry height="100" width="290" x="1780" y="2080" as="geometry" />
+        <mxCell id="ext_ownreg_ref" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Registro de Propiedad de Cuentas&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Container, ver 8.2]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="100" width="290" x="1490" y="970" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Core Bancario Digital&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Container, ver 8.2]&lt;/i&gt;" vertex="1">
-          <mxGeometry height="100" width="290" x="1850" y="800" as="geometry" />
+        <mxCell id="ext_coredigital_ref" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Core Bancario Digital&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Container, ver 8.2]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="100" width="290" x="1560" y="-310" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Core Bancario Tradicional&lt;/b&gt;&lt;div&gt;&lt;i style=&quot;font-size: 12px;&quot;&gt;[Sistema Externo]&lt;/i&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="100" width="290" x="2120" y="1030" as="geometry" />
+        <mxCell id="ext_coretrad_ref" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Core Bancario Tradicional&lt;/b&gt;&lt;div&gt;&lt;i style=&quot;font-size: 12px;&quot;&gt;[Sistema Externo]&lt;/i&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="290" x="1830" y="-80" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Motor de Riesgo&lt;/b&gt;&lt;br&gt;&lt;i style=&quot;font-size: 12px;&quot;&gt;[Sistema Externo]&lt;/i&gt;" vertex="1">
-          <mxGeometry height="100" width="290" x="2320" y="1260" as="geometry" />
+        <mxCell id="ext_riesgo_ref" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Motor de Riesgo&lt;/b&gt;&lt;br&gt;&lt;i style=&quot;font-size: 12px;&quot;&gt;[Sistema Externo]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="100" width="290" x="2030" y="150" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Motor de Fraude&lt;/b&gt;&lt;br&gt;&lt;i style=&quot;font-size: 12px;&quot;&gt;[Sistema Externo]&lt;/i&gt;" vertex="1">
-          <mxGeometry height="100" width="290" x="2510" y="1460" as="geometry" />
+        <mxCell id="ext_fraude_ref" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Motor de Fraude&lt;/b&gt;&lt;br&gt;&lt;i style=&quot;font-size: 12px;&quot;&gt;[Sistema Externo]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="100" width="290" x="2220" y="350" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Plataforma KYC&lt;/b&gt;&lt;br&gt;&lt;i style=&quot;font-size: 12px;&quot;&gt;[Sistema Externo]&lt;/i&gt;" vertex="1">
-          <mxGeometry height="100" width="290" x="2290" y="1650" as="geometry" />
+        <mxCell id="ext_kyc_ref" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Plataforma KYC&lt;/b&gt;&lt;br&gt;&lt;i style=&quot;font-size: 12px;&quot;&gt;[Sistema Externo]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="100" width="290" x="2000" y="540" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Rieles de Pago&lt;/b&gt;&lt;br&gt;&lt;i style=&quot;font-size: 12px;&quot;&gt;[Sistema Externo]&lt;/i&gt;" vertex="1">
-          <mxGeometry height="100" width="290" x="2100" y="1810" as="geometry" />
+        <mxCell id="ext_rieles_ref" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Rieles de Pago&lt;/b&gt;&lt;br&gt;&lt;i style=&quot;font-size: 12px;&quot;&gt;[Sistema Externo]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="100" width="290" x="1810" y="700" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Event Bus&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Container, ver 8.2]&lt;/i&gt;" vertex="1">
-          <mxGeometry height="100" width="290" x="1990" y="1950" as="geometry" />
+        <mxCell id="ext_eventbus_ref" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Event Bus&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Container, ver 8.2]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="100" width="290" x="1700" y="840" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-21" edge="1" parent="1" source="RNOovXjiGSu3f4s4odDM-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;strokeColor=#666666;" target="RNOovXjiGSu3f4s4odDM-4" value="">
+        <mxCell id="ke1" edge="1" parent="1" source="k_pic" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;strokeColor=#666666;" target="k_idem" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-22" edge="1" parent="1" source="RNOovXjiGSu3f4s4odDM-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="RNOovXjiGSu3f4s4odDM-5" value="OK">
+        <mxCell id="ke2" edge="1" parent="1" source="k_idem" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="k_vco" value="OK">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-23" edge="1" parent="1" source="RNOovXjiGSu3f4s4odDM-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="RNOovXjiGSu3f4s4odDM-9" value="Lee/escribe clave">
+        <mxCell id="ke3" edge="1" parent="1" source="k_idem" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="k_idemstore" value="Lee/escribe clave">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="735" y="1360" />
-              <mxPoint x="410" y="1360" />
+              <mxPoint x="445" y="250" />
+              <mxPoint x="120" y="250" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-24" edge="1" parent="1" source="RNOovXjiGSu3f4s4odDM-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="RNOovXjiGSu3f4s4odDM-6" value="Reserva fondos">
+        <mxCell id="ke4" edge="1" parent="1" source="k_vco" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="k_ledger" value="Reserva fondos">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1240.08" y="1330" />
+              <mxPoint x="950.08" y="220" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-25" edge="1" parent="1" source="RNOovXjiGSu3f4s4odDM-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="RNOovXjiGSu3f4s4odDM-7" value="Resultado de validación">
+        <mxCell id="ke5" edge="1" parent="1" source="k_vco" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="k_pee" value="Resultado de validación">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-26" edge="1" parent="1" source="RNOovXjiGSu3f4s4odDM-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;strokeColor=#666666;" target="RNOovXjiGSu3f4s4odDM-8" value="">
+        <mxCell id="ke6" edge="1" parent="1" source="k_pee" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;strokeColor=#666666;" target="k_rail" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-27" edge="1" parent="1" source="RNOovXjiGSu3f4s4odDM-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="RNOovXjiGSu3f4s4odDM-6" value="Confirma movimiento">
+        <mxCell id="ke7" edge="1" parent="1" source="k_pee" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="k_ledger" value="Confirma movimiento">
           <mxGeometry relative="1" x="-0.1859" y="10" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="1295" y="1540" />
+              <mxPoint x="1005" y="430" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-28" edge="1" parent="1" source="RNOovXjiGSu3f4s4odDM-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="RNOovXjiGSu3f4s4odDM-10" value="Escribe estado + outbox (misma transacción)">
+        <mxCell id="ke8" edge="1" parent="1" source="k_pee" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="k_paystore" value="Escribe estado + outbox (misma transacción)">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-29" edge="1" parent="1" source="RNOovXjiGSu3f4s4odDM-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="RNOovXjiGSu3f4s4odDM-10" value="Lee outbox pendiente (polling asíncrono)">
+        <mxCell id="ke9" edge="1" parent="1" source="k_outbox" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="k_paystore" value="Lee outbox pendiente (polling asíncrono)">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-30" edge="1" parent="1" source="RNOovXjiGSu3f4s4odDM-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="RNOovXjiGSu3f4s4odDM-20" value="Publica evento">
+        <mxCell id="ke10" edge="1" parent="1" source="k_outbox" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="ext_eventbus_ref" value="Publica evento">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1840" y="1825" />
+              <mxPoint x="1550" y="715" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-31" edge="1" parent="1" source="RNOovXjiGSu3f4s4odDM-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="RNOovXjiGSu3f4s4odDM-14" value="Debita/acredita (productos propios) [API]">
+        <mxCell id="ke11" edge="1" parent="1" source="k_ledger" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="ext_coredigital_ref" value="Debita/acredita (productos propios) [API]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1645" y="1110" />
+              <mxPoint x="1355" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-32" edge="1" parent="1" source="RNOovXjiGSu3f4s4odDM-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="RNOovXjiGSu3f4s4odDM-12" value="Debita/acredita&lt;div&gt;&amp;nbsp;(legado, vía ACL) [API]&lt;/div&gt;">
+        <mxCell id="ke12" edge="1" parent="1" source="k_ledger" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="k_acl" value="Debita/acredita (legado, vía ACL) [API]">
           <mxGeometry relative="1" x="0.4783" y="-32" as="geometry">
             <mxPoint x="-20" y="-7" as="offset" />
             <Array as="points">
-              <mxPoint x="1470" y="1180" />
-              <mxPoint x="1470" y="1205" />
+              <mxPoint x="1180" y="70" />
+              <mxPoint x="1180" y="95" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-33" edge="1" parent="1" source="RNOovXjiGSu3f4s4odDM-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="RNOovXjiGSu3f4s4odDM-16" value="Valida riesgo [API]">
+        <mxCell id="ke13" edge="1" parent="1" source="k_vco" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="ext_riesgo_ref" value="Valida riesgo [API]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1550.08" y="1360" />
-              <mxPoint x="1550.08" y="1310" />
+              <mxPoint x="1260.08" y="250" />
+              <mxPoint x="1260.08" y="200" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-34" edge="1" parent="1" source="RNOovXjiGSu3f4s4odDM-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="RNOovXjiGSu3f4s4odDM-17" value="Valida fraude [API]">
+        <mxCell id="ke14" edge="1" parent="1" source="k_vco" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="ext_fraude_ref" value="Valida fraude [API]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="2305" y="1390" />
+              <mxPoint x="2015" y="280" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-35" edge="1" parent="1" source="RNOovXjiGSu3f4s4odDM-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="RNOovXjiGSu3f4s4odDM-18" value="Verifica sanciones/PEP [API]">
+        <mxCell id="ke15" edge="1" parent="1" source="k_vco" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="ext_kyc_ref" value="Verifica sanciones/PEP [API]">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="2085" y="1420" />
+              <mxPoint x="1795" y="310" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-36" edge="1" parent="1" source="RNOovXjiGSu3f4s4odDM-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="RNOovXjiGSu3f4s4odDM-19" value="Enruta [ISO 20022]">
+        <mxCell id="ke16" edge="1" parent="1" source="k_rail" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="ext_rieles_ref" value="Enruta [ISO 20022]">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-37" edge="1" parent="1" source="RNOovXjiGSu3f4s4odDM-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="RNOovXjiGSu3f4s4odDM-15" value="Traduce y reintenta con operationId [API]">
+        <mxCell id="ke17" edge="1" parent="1" source="k_acl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="ext_coretrad_ref" value="Traduce y reintenta con operationId [API]">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="RNOovXjiGSu3f4s4odDM-38" edge="1" parent="1" source="RNOovXjiGSu3f4s4odDM-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#333333;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="RNOovXjiGSu3f4s4odDM-13" value="Consulta propietario antes de debitar/acreditar [Lectura fuerte]">
+        <mxCell id="ke18" edge="1" parent="1" source="k_ledger" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;fontSize=10;strokeColor=#333333;fontColor=#333333;labelBackgroundColor=#FFFFFF;" target="ext_ownreg_ref" value="Consulta propietario antes de debitar/acreditar [Lectura fuerte]">
           <mxGeometry relative="1" x="-0.3112" y="20" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="1810" y="1153" />
+              <mxPoint x="1520" y="43" />
             </Array>
           </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="c4-dynamic-corte-propiedad" name="C4 Dynamic - Corte de Propiedad Multicore">
+    <mxGraphModel dx="3671" dy="2394" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a_title" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;" value="Diagrama C4 Dynamic — Corte de propiedad multicore" vertex="1">
+          <mxGeometry height="60" width="2000" x="-130" y="-260" as="geometry" />
+        </mxCell>
+        <mxCell id="a_note" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontStyle=2;fontColor=#666666;whiteSpace=wrap;" value="Contexto: se activa cuando se decide transferir la propiedad de una cuenta de un core a otro (migración gradual, sección 16). No sustituye una transacción atómica: cada paso queda registrado para permitir recuperación ante fallos." vertex="1">
+          <mxGeometry height="50" width="1200" x="280" y="-170" as="geometry" />
+        </mxCell>
+        <mxCell id="a_proc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontColor=#1a1a1a;fontSize=12;fontStyle=1;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Proceso de Corte&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Proceso operado por el equipo de migración]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="100" width="280" x="760" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="a_origen" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Core Origen&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Core Bancario Tradicional o Digital, según dirección de la migración]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="110" width="300" x="60" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="a_destino" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Core Destino&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Core Bancario Digital o Tradicional, según dirección de la migración]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="110" width="300" x="1460" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="a_ownreg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Registro de Propiedad de Cuentas&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: KV replicado]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Almacena propietario, versión y estado por cuenta; también funciona como registro durable de migración (secciones 7.1 y 15)" vertex="1">
+          <mxGeometry height="170" width="280" x="760" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="a_eventbus" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Event Bus&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: Apache Kafka]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="100" width="260" x="370" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="a_readmodel" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#2E6295;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Vista Agregada de Cliente&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor: Read Model]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="100" width="260" x="810" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="a_failclosed" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontStyle=2;fontColor=#666666;whiteSpace=wrap;" value="Contingencia: si el Registro de Propiedad de Cuentas no está disponible en cualquiera de estos pasos, la operación se rechaza (fail-closed); no se asume un estado de propiedad. Si falla el paso 5 (habilitación local), el Proceso de Corte reconsulta este registro para verificar el estado real antes de reintentar o revertir (recuperación de un corte interrumpido, 16.1)." vertex="1">
+          <mxGeometry height="170" width="380" x="1120" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="a_e1" edge="1" parent="1" source="a_proc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;startArrow=block;" target="a_origen" value="1-2) Impide nuevas operaciones; el core origen confirma bloqueo&amp;nbsp;&lt;div&gt;completo (pendientes completadas o compensadas)&lt;/div&gt;">
+          <mxGeometry relative="1" x="-0.0129" y="-22" as="geometry">
+            <mxPoint x="12" y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a_e3" edge="1" parent="1" source="a_proc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;startArrow=block;" target="a_ownreg" value="3-4) Actualiza propietario y versión (operación durable); el registro confirma la escritura antes de continuar">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a_e5" edge="1" parent="1" source="a_proc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="a_destino" value="5) Habilita escritura local (operación separada del paso 3, verificada contra el registro)">
+          <mxGeometry relative="1" x="-0.0116" y="-40" as="geometry">
+            <mxPoint x="40" y="-41" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a_e6" edge="1" parent="1" source="a_proc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="a_eventbus" value="6) Publica evento de cambio de propietario">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="510.08" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a_e7" edge="1" parent="1" source="a_eventbus" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="a_readmodel" value="7) Actualiza vista de lectura multicore">
+          <mxGeometry relative="1" y="-40" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a_legend" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;" value="&lt;b&gt;Leyenda&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color:#08427B;&quot;&gt;■&lt;/span&gt; Proceso operativo&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#2E6295;&quot;&gt;■&lt;/span&gt; Contenedor en alcance&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#6B6B6B;&quot;&gt;■&lt;/span&gt; Core (origen/destino)&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#B85450;&quot;&gt;■&lt;/span&gt; Ruta de contingencia" vertex="1">
+          <mxGeometry height="40" width="900" x="60" y="850" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="c4-dynamic-pago-legado" name="C4 Dynamic - Pago con Fallback a Legado (ACL)">
+    <mxGraphModel dx="1584" dy="2089" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="b_title" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;" value="Diagrama C4 Dynamic — Pago con fallback a legado vía ACL" vertex="1">
+          <mxGeometry height="60" width="2560" x="20" y="-260" as="geometry" />
+        </mxCell>
+        <mxCell id="b_note" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontStyle=2;fontColor=#666666;whiteSpace=wrap;" value="Contexto: la orden ya fue enrutada por el API Gateway al Payment Hub (ver Nivel 2). Este diagrama detalla el caso en que la cuenta pertenece al core tradicional (legado)." vertex="1">
+          <mxGeometry height="40" width="1400" x="900" y="-170" as="geometry" />
+        </mxCell>
+        <mxCell id="b_pic" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Payment Initiation Controller&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="120" width="260" x="20" as="geometry" />
+        </mxCell>
+        <mxCell id="b_idem" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Idempotency Guard&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="120" width="260" x="480" as="geometry" />
+        </mxCell>
+        <mxCell id="b_vco" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Validation &amp;amp; Compliance Orchestrator&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="120" width="260" x="940" as="geometry" />
+        </mxCell>
+        <mxCell id="b_ledger" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Ledger Adapter&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="120" width="260" x="1400" as="geometry" />
+        </mxCell>
+        <mxCell id="b_acl" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;ACL Core Tradicional&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="120" width="260" x="1860" as="geometry" />
+        </mxCell>
+        <mxCell id="b_coretrad" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Core Bancario Tradicional&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="120" width="260" x="2320" as="geometry" />
+        </mxCell>
+        <mxCell id="b_idemstore" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Idempotency Store&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente: DB]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="110" width="260" x="480" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="b_ownreg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Registro de Propiedad de Cuentas&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Container, ver 8.2]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="110" width="260" x="1400" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="b_uncertain" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontStyle=2;fontColor=#666666;whiteSpace=wrap;" value="Resultado incierto (timeout / error de comunicación): el ACL no asume éxito ni fallo; marca la operación como pendiente de verificación y dispara conciliación mediante consulta o reintento idempotente con operationId (hallazgo E)." vertex="1">
+          <mxGeometry height="90" width="320" x="1860" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="b_pee" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Payment Execution Engine&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="120" width="260" x="940" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="b_paystore" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Payment Store&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente: DB]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="110" width="260" x="940" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="b_outbox" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#85BBF0;strokeColor=#5B9BD5;fontColor=#1a1a1a;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Outbox Publisher&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="120" width="260" x="1400" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="b_eventbus" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Event Bus&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Container, ver 8.2]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="110" width="260" x="1860" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="b_e1" edge="1" parent="1" source="b_pic" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="b_idem" value="1) Reenvía para verificación de idempotencia">
+          <mxGeometry relative="1" y="50" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b_e2" edge="1" parent="1" source="b_idem" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="b_idemstore" value="2) Verifica idempotencyKey (lee/escribe la clave)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b_e3" edge="1" parent="1" source="b_idem" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="b_vco" value="3) OK, sin duplicado — ejecuta el esquema&lt;div&gt;&amp;nbsp;(riesgo, fraude y sanciones en paralelo)&lt;/div&gt;">
+          <mxGeometry relative="1" x="-0.1" y="40" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b_e4" edge="1" parent="1" source="b_vco" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="b_ledger" value="4) Resultado de validación OK&lt;div&gt;&amp;nbsp;— reserva fondos&lt;/div&gt;">
+          <mxGeometry relative="1" x="-0.1" y="10" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b_e5" edge="1" parent="1" source="b_ledger" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="b_ownreg" value="5) Consulta propietario, versión y estado">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b_e6" edge="1" parent="1" source="b_ledger" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="b_acl" value="6) Propietario = legado&amp;nbsp;&lt;div&gt;— invoca ACL con operationId&lt;/div&gt;">
+          <mxGeometry relative="1" y="-30" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b_e7" edge="1" parent="1" source="b_acl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="b_coretrad" value="7) Traduce y ejecuta; precondición: referencia de&amp;nbsp;&lt;div&gt;operación persistida y verificable en el legado (hallazgo E)&lt;/div&gt;">
+          <mxGeometry relative="1" y="-70" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b_e8" edge="1" parent="1" source="b_acl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;dashed=1;strokeColor=#B85450;fontColor=#B85450;" target="b_ledger" value="8) Resultado incierto — concilia antes de confirmar (ver nota)">
+          <mxGeometry relative="1" y="-50" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1760" y="40" />
+              <mxPoint x="1760" y="40" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b_e9" edge="1" parent="1" source="b_ledger" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="b_pee" value="9) Confirma o compensa el movimiento">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1440" y="180" />
+              <mxPoint x="1150" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b_e10" edge="1" parent="1" source="b_pee" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="b_paystore" value="10) Escribe estado + outbox (misma transacción)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b_e11" edge="1" parent="1" source="b_outbox" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="b_paystore" value="11) Sondea outbox pendiente (polling asíncrono)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1530" y="790.06" />
+              <mxPoint x="1130" y="790.06" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b_e12" edge="1" parent="1" source="b_outbox" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="b_eventbus" value="12) Publica evento">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b_legend" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;" value="&lt;b&gt;Leyenda&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color:#5B9BD5;&quot;&gt;■&lt;/span&gt; Componente de Payment Hub&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#6B6B6B;&quot;&gt;■&lt;/span&gt; Sistema externo / referencia&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#B85450;&quot;&gt;■&lt;/span&gt; Ruta de contingencia (resultado incierto)" vertex="1">
+          <mxGeometry height="40" width="1200" x="20" y="1080" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="cloud-azure-hadr" name="Cloud - Arquitectura Azure (HA-DR)">
+    <mxGraphModel dx="1584" dy="2389" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="z_title" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;" value="Diagrama de Arquitectura en la Nube: Microsoft Azure" vertex="1">
+          <mxGeometry height="70" width="2700" x="20" y="-300" as="geometry" />
+        </mxCell>
+        <mxCell id="z_note" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontStyle=2;fontColor=#666666;whiteSpace=wrap;" value="Regiones elegidas por disponibilidad confirmada de Oracle Database@Azure en Sudamérica: Brazil South (primaria, zonas de disponibilidad 2 y 3) y Brazil Southeast (secundaria/DR). La residencia de datos fuera de Ecuador debe validarse contra la LOPDP (12.1) antes de una decisión final de hosting." vertex="1">
+          <mxGeometry height="70" width="1550" x="620" y="-210" as="geometry" />
+        </mxCell>
+        <mxCell id="z_cliente" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=#052744;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Cliente&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Actor]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Web, móvil o tercero autorizado (Open Finance)" vertex="1">
+          <mxGeometry height="130" width="240" x="20" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="z_fd" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0078D4;strokeColor=#005A9E;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Azure Front Door + WAF&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Azure: global]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Entrada global, TLS, protección DDoS/WAF y failover L7 de tráfico entre regiones" vertex="1">
+          <mxGeometry height="140" width="340" x="900" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="z_region1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6F2FB;strokeColor=#0078D4;dashed=1;verticalAlign=top;align=left;fontSize=14;fontStyle=1;spacing=10;" value="Región Primaria: Brazil South (zone-redundant, AZ2 + AZ3)" vertex="1">
+          <mxGeometry height="780" width="1620" x="20" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="z_apim1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0078D4;strokeColor=#005A9E;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Azure API Management&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Azure: entrada]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Equivale al API Gateway del Nivel 2: enrutamiento, throttling, validación de esquema" vertex="1">
+          <mxGeometry height="150" width="310" x="70" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="z_iam_ref" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Plataforma IAM&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo, ver Nivel 2]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="110" width="260" x="480" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="z_kv1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0078D4;strokeColor=#005A9E;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Azure Key Vault&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Azure: secretos]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Certificados TLS, claves y secretos vía Private Endpoint. Redundancia geográfica nativa del servicio: sin paso de DR adicional para los secretos" vertex="1">
+          <mxGeometry height="160" width="300" x="760" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="z_aks1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0078D4;strokeColor=#005A9E;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Azure Kubernetes Service (AKS)&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Azure: cómputo, zone-redundant]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Node pools separados por contenedor: BFF Canal Digital, Core Bancario Digital, Payment Hub (equivalen al Nivel 2). Margen N+1 por zona" vertex="1">
+          <mxGeometry height="190" width="430" x="70" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="z_kafka1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0078D4;strokeColor=#005A9E;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Apache Kafka&lt;/b&gt;&lt;br&gt;&lt;i&gt;[AKS StatefulSet, zone-redundant]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Event Bus (9.1); 3 réplicas mínimo, una por zona; acks=all, min.insync.replicas≥2" vertex="1">
+          <mxGeometry height="170" width="290" x="560" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="z_oracle1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0078D4;strokeColor=#005A9E;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Oracle Database@Azure&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Azure: datos]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Core Bancario Digital y Payment Store de Payment Hub, en el mismo clúster. Sincronía intra-región (Data Guard SYNC, AZ2/AZ3, Fast-Start Failover). Cross-región: Core Digital asíncrono, Payment Store síncrono (aislado, ver flechas verde/roja)" vertex="1">
+          <mxGeometry height="220" width="340" x="70" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="z_redis1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0078D4;strokeColor=#005A9E;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Azure Cache for Redis&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Azure: datos, zone-redundant]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Registro de Propiedad de Cuentas (KV replicado, versionado)" vertex="1">
+          <mxGeometry height="160" width="300" x="460" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="z_region2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6F2FB;strokeColor=#0078D4;dashed=1;verticalAlign=top;align=left;fontSize=14;fontStyle=1;spacing=10;" value="Región Secundaria (DR): Brazil Southeast, standby cálido" vertex="1">
+          <mxGeometry height="830" width="940" x="1720" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="z_apim2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7FB8E6;strokeColor=#005A9E;fontColor=#0a2a40;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Azure API Management&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Azure: standby]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="120" width="290" x="1770" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="z_aks2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7FB8E6;strokeColor=#005A9E;fontColor=#0a2a40;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;AKS&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Azure: standby, capacidad reducida]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Mismos node pools, escalados a mínimo hasta una conmutación" vertex="1">
+          <mxGeometry height="150" width="290" x="2100" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="z_oracle2_pay" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#A5D6A7;strokeColor=#1B5E20;fontColor=#0a2a40;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Oracle Database@Azure&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Azure: standby, síncrono]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Payment Store: réplica síncrona confirmada (RPO 0)" vertex="1">
+          <mxGeometry height="140" width="290" x="1770" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="z_oracle2_core" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7FB8E6;strokeColor=#005A9E;fontColor=#0a2a40;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Oracle Database@Azure&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Azure: standby, asíncrono]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Core Bancario Digital: réplica asíncrona (apply lag &amp;gt; 0)" vertex="1">
+          <mxGeometry height="140" width="290" x="1770" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="z_redis2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7FB8E6;strokeColor=#005A9E;fontColor=#0a2a40;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Azure Cache for Redis&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Azure: standby]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Geo-réplica asíncrona (geo-replication)" vertex="1">
+          <mxGeometry height="150" width="280" x="2100" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="z_kafka2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7FB8E6;strokeColor=#005A9E;fontColor=#0a2a40;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Apache Kafka&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Azure: clúster nuevo, vacío]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Sin mirroring activo; se reconstruye por categoría de evento tras la promoción (8.5)" vertex="1">
+          <mxGeometry height="150" width="260" x="2400" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="z_dr_note" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontStyle=2;fontColor=#666666;whiteSpace=wrap;" value="Kafka no tiene réplica multi-región activa: el clúster secundario se levanta vacío.&lt;br&gt;La recuperación es por categoría de evento (pagos, CDC, interacción, vistas derivadas),&lt;br&gt;no por reproducción de historial (8.5). El RPO de Core Digital y Redis depende del&lt;br&gt;retraso de la replicación asíncrona y se valida con simulacros (15.3); el Payment Store&lt;br&gt;es la única excepción síncrona (flecha verde)." vertex="1">
+          <mxGeometry height="130" width="900" x="1770" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="z_gw" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0078D4;strokeColor=#005A9E;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Azure ExpressRoute / VPN Gateway&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Azure: conectividad híbrida]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Debe alcanzar el legado desde ambas regiones (Global Reach o circuito adicional desde la región secundaria)" vertex="1">
+          <mxGeometry height="130" width="360" x="420" y="1120" as="geometry" />
+        </mxCell>
+        <mxCell id="z_coretrad" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Core Bancario Tradicional&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Sistema Externo, on-premises]&lt;/i&gt;&lt;br&gt;&lt;br&gt;No migrado a la nube en esta fase (16, Strangler Fig)" vertex="1">
+          <mxGeometry height="130" width="310" x="70" y="1120" as="geometry" />
+        </mxCell>
+        <mxCell id="z_monitor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0078D4;strokeColor=#005A9E;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Azure Monitor + Log Analytics + Application Insights&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Azure: observabilidad global]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Recibe OTLP desde AKS de ambas regiones (9.1, 17); respaldo de la Plataforma de Observabilidad" vertex="1">
+          <mxGeometry height="150" width="440" x="900" y="1120" as="geometry" />
+        </mxCell>
+        <mxCell id="z_legend" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;" value="&lt;b&gt;Leyenda&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color:#08427B;&quot;&gt;&amp;#9632;&lt;/span&gt; Actor&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#0078D4;&quot;&gt;&amp;#9632;&lt;/span&gt; Servicio Azure activo&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#7FB8E6;&quot;&gt;&amp;#9632;&lt;/span&gt; Servicio Azure en standby (DR)&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#2E7D32;&quot;&gt;&amp;#9632;&lt;/span&gt; Datos síncronos cross-región&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#6B6B6B;&quot;&gt;&amp;#9632;&lt;/span&gt; Externo / on-premises&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#B85450;&quot;&gt;&amp;#9632;&lt;/span&gt; Ruta de failover / réplica asíncrona" vertex="1">
+          <mxGeometry height="40" width="2100" x="20" y="1320" as="geometry" />
+        </mxCell>
+        <mxCell id="z_e1" edge="1" parent="1" source="z_cliente" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=11;align=center;" target="z_fd" value="HTTPS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_e2" edge="1" parent="1" source="z_fd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=11;align=center;" target="z_apim1" value="Ruta activa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_e3" edge="1" parent="1" source="z_fd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=11;align=center;dashed=1;strokeColor=#B85450;fontColor=#B85450;" target="z_apim2" value="Failover de tráfico (automático por health probe)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_e4" edge="1" parent="1" source="z_apim1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=11;align=center;" target="z_aks1" value="Enruta">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_e5" edge="1" parent="1" source="z_apim1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=11;align=center;" target="z_iam_ref" value="Autentica/autoriza [OAuth2/OIDC]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_e6" edge="1" parent="1" source="z_aks1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=11;align=center;" target="z_kv1" value="Lee secretos/certificados">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_e7" edge="1" parent="1" source="z_aks1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=11;align=center;" target="z_oracle1" value="Lecturas/escrituras">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_e8" edge="1" parent="1" source="z_aks1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=11;align=center;" target="z_redis1" value="Consulta propietario, versión y estado">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_e9" edge="1" parent="1" source="z_aks1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=11;align=center;" target="z_kafka1" value="Publica/consume eventos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_e10" edge="1" parent="1" source="z_aks1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=11;align=center;" target="z_gw" value="Tráfico hacia el legado">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_e11" edge="1" parent="1" source="z_gw" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=11;align=center;" target="z_coretrad" value="Túnel privado">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_e12s" edge="1" parent="1" source="z_oracle1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=11;align=center;strokeColor=#2E7D32;fontColor=#2E7D32;strokeWidth=2;" target="z_oracle2_pay" value="Payment Store: réplica síncrona (Maximum Availability)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_e12a" edge="1" parent="1" source="z_oracle1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=11;align=center;dashed=1;strokeColor=#B85450;fontColor=#B85450;" target="z_oracle2_core" value="Core Digital: réplica asíncrona (Data Guard)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_e13" edge="1" parent="1" source="z_redis1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=11;align=center;dashed=1;strokeColor=#B85450;fontColor=#B85450;" target="z_redis2" value="Geo-replicación asíncrona">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_e14" edge="1" parent="1" source="z_apim2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=11;align=center;" target="z_aks2" value="Enruta (tras conmutación, 15.2)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_e17" edge="1" parent="1" source="z_aks2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=11;align=center;" target="z_oracle2_pay" value="Lecturas/escrituras (tras promoción)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_e19" edge="1" parent="1" source="z_aks2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=11;align=center;" target="z_redis2" value="Consulta de estado (tras promoción)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_e15" edge="1" parent="1" source="z_aks1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=11;align=center;" target="z_monitor" value="OTLP">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_e16" edge="1" parent="1" source="z_aks2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=11;align=center;dashed=1;strokeColor=#B85450;fontColor=#B85450;" target="z_monitor" value="OTLP">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="iam-componentes" name="IAM - Diagrama de Componentes">
+    <mxGraphModel dx="2692" dy="2682" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ic_title" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=18;fontStyle=1;" value="Diagrama de Componentes — Dominio IAM" vertex="1">
+          <mxGeometry height="60" width="1360" x="20" y="-180" as="geometry" />
+        </mxCell>
+        <mxCell id="ic_note" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=10;fontStyle=2;fontColor=#666666;whiteSpace=wrap;" value="Alcance: componentes propios del dominio IAM. Los contenedores externos a este dominio (BFF, API Gateway, cores, Event Bus, TPP) se muestran solo como referencia de sus puntos de integración." vertex="1">
+          <mxGeometry height="45" width="1320" x="20" y="-110" as="geometry" />
+        </mxCell>
+        <mxCell id="ic_cliente" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=#052744;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Cliente&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Actor, vía BFF Canal Digital]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="90" width="260" x="20" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ic_bff" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;BFF Canal Digital&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor, ver 8.2]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="90" width="260" x="330" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ic_tpp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=#052744;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;TPP / Tercero Autorizado&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Actor, Open Finance]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="90" width="260" x="1080" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ic_idp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9673A6;strokeColor=#76608A;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Identity Provider&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente: Authorization Server]&lt;/i&gt;&lt;br&gt;&lt;br&gt;OIDC/OAuth2 para canales; FAPI para Open Finance. Orquesta autenticación, step-up y emisión de códigos de autorización" vertex="1">
+          <mxGeometry height="150" width="420" x="460" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="ic_token" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9673A6;strokeColor=#76608A;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Token Service&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Emite y valida tokens (JWT, 5–15 min); gestiona refresh tokens y expone el endpoint JWKS" vertex="1">
+          <mxGeometry height="170" width="300" x="20" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="ic_mfa" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9673A6;strokeColor=#76608A;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;MFA Service&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Segundo factor (OTP, push, biométrico); invocado en step-up para operaciones de alta sensibilidad" vertex="1">
+          <mxGeometry height="170" width="300" x="360" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="ic_consent" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9673A6;strokeColor=#76608A;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Consent &amp;amp; Entitlement Service&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Consentimientos Open Finance (alcance, versión, expiración) y políticas RBAC/ABAC para operaciones internas" vertex="1">
+          <mxGeometry height="170" width="320" x="700" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="ic_directory" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9673A6;strokeColor=#76608A;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Directorio de Usuarios y Credenciales&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente: almacén]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Credenciales, factores registrados y estado de cuenta de usuario" vertex="1">
+          <mxGeometry height="170" width="300" x="1060" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="ic_gw" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;API Gateway&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor, ver 8.2]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Cachea JWKS localmente (continuidad, 11.1)" vertex="1">
+          <mxGeometry height="120" width="300" x="20" y="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="ic_coredig" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Core Bancario Digital / Payment Hub&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedores, ver 8.2]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="90" width="320" x="20" y="1310" as="geometry" />
+        </mxCell>
+        <mxCell id="ic_eventbus" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Event Bus&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor, ver 8.2]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="90" width="260" x="400" y="1310" as="geometry" />
+        </mxCell>
+        <mxCell id="ic_e1" edge="1" parent="1" source="ic_cliente" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="ic_idp" value="Autentica (OIDC/OAuth2, Authorization Code + PKCE)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ic_e2" edge="1" parent="1" source="ic_bff" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="ic_idp" value="Redirige al flujo de login">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="230" />
+              <mxPoint x="630" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ic_e3" edge="1" parent="1" source="ic_tpp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="ic_idp" value="Autentica (FAPI: mTLS + JWS firmado)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="670" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ic_e4" edge="1" parent="1" source="ic_idp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="ic_token" value="Solicita emisión de tokens">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ic_e5" edge="1" parent="1" source="ic_idp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="ic_mfa" value="Invoca en step-up (alta sensibilidad)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ic_e6" edge="1" parent="1" source="ic_idp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="ic_consent" value="Verifica consentimiento / scopes / roles">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="730" y="645" />
+              <mxPoint x="860" y="645" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ic_e7" edge="1" parent="1" source="ic_idp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="ic_directory" value="Valida credenciales">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ic_e8" edge="1" parent="1" source="ic_gw" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="ic_token" value="Valida token contra JWKS (cache local, 11.1)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ic_e9" edge="1" parent="1" source="ic_gw" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="ic_coredig" value="Enruta autorizado (RBAC/scopes)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ic_e10" edge="1" parent="1" source="ic_coredig" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;dashed=1;strokeColor=#76608A;fontColor=#76608A;" target="ic_eventbus" value="Identidad de servicio (mTLS interno)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ic_legend" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=10;" value="&lt;b&gt;Leyenda&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color:#08427B;&quot;&gt;■&lt;/span&gt; Actor&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#9673A6;&quot;&gt;■&lt;/span&gt; Componente del dominio IAM&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#6B6B6B;&quot;&gt;■&lt;/span&gt; Contenedor referenciado (fuera de alcance)&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#76608A;&quot;&gt;- - -&lt;/span&gt; mTLS (identidad de servicio)" vertex="1">
+          <mxGeometry height="50" width="1320" x="20" y="1430" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="iam-secuencia-auth" name="IAM - Secuencia de Autenticacion y Autorizacion">
+    <mxGraphModel dx="2991" dy="2869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="is_title" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=18;fontStyle=1;" value="Diagrama de Secuencia — Autenticación y Autorización" vertex="1">
+          <mxGeometry height="70" width="1600" x="20" y="-240" as="geometry" />
+        </mxCell>
+        <mxCell id="is_cliente" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=#052744;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Cliente&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Actor, canal digital]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="90" width="260" x="20" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="is_tpp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=#052744;fontColor=#FFFFFF;fontSize=12;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;TPP&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Actor, Open Finance]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="90" width="260" x="1300" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="is_bff" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;BFF Canal Digital&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="90" width="260" x="20" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="is_gw" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;API Gateway&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedor]&lt;/i&gt;&lt;br&gt;&lt;br&gt;Cachea JWKS localmente (continuidad, 11.1)" vertex="1">
+          <mxGeometry height="110" width="260" x="1300" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="is_idp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9673A6;strokeColor=#76608A;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Identity Provider&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente: Authorization Server]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="110" width="440" x="570" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="is_mfa" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9673A6;strokeColor=#76608A;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;MFA Service&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="100" width="260" x="300" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="is_consent" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9673A6;strokeColor=#76608A;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;" value="&lt;b&gt;Consent &amp;amp; Entitlement Service&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Componente]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="100" width="300" x="1020" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="is_core" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;arcSize=8;align=center;verticalAlign=middle;spacing=6;dashed=1;" value="&lt;b&gt;Core Bancario Digital / Payment Hub&lt;/b&gt;&lt;br&gt;&lt;i&gt;[Contenedores]&lt;/i&gt;" vertex="1">
+          <mxGeometry height="100" width="440" x="570" y="1160" as="geometry" />
+        </mxCell>
+        <mxCell id="is_note1" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=10;fontStyle=2;fontColor=#666666;whiteSpace=wrap;" value="Contexto: cubre el inicio de sesión de canal (izquierda/centro) y el flujo Open Finance con FAPI (derecha); ambos convergen en el Identity Provider y en la validación de token en cada llamada al API Gateway (11)." vertex="1">
+          <mxGeometry height="40" width="1560" x="20" y="1310" as="geometry" />
+        </mxCell>
+        <mxCell id="is_note2" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=10;fontStyle=2;fontColor=#666666;whiteSpace=wrap;" value="Contingencia (11.1): si el IAM está degradado, el Gateway no bloquea toda operación por igual — baja sensibilidad: acepta la última clave JWKS cacheada más allá de su vigencia normal; alta sensibilidad: bloquea hasta reconexión, mitigado por una lista de revocación local de vigencia corta." vertex="1">
+          <mxGeometry height="55" width="1560" x="20" y="1370" as="geometry" />
+        </mxCell>
+        <mxCell id="is_e1" edge="1" parent="1" source="is_cliente" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="is_bff" value="1) Inicia sesión (web/móvil)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="is_e2" edge="1" parent="1" source="is_bff" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="is_idp" value="2,5) Redirige al login (Authorization Code + PKCE, OIDC); tras autenticar (y MFA si aplica) emite access token JWT (5–15 min) + refresh token">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="670.11" y="375" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="is_e3" edge="1" parent="1" source="is_idp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="is_mfa" value="3-4) Step-up si la operación es de alta sensibilidad (11); MFA confirma segundo factor">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="is_e4" edge="1" parent="1" source="is_bff" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="is_gw" value="6) Llama con access token en cada solicitud">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800.11" y="340.11" />
+              <mxPoint x="800.11" y="360.11" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="is_e5" edge="1" parent="1" source="is_tpp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="is_idp" value="9,11) Solicitud FAPI (mTLS + JWS firmado); tras validar el consentimiento, emite token restringido al alcance consentido">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="850.11" y="85" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="is_e6" edge="1" parent="1" source="is_idp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="is_consent" value="10) Valida consentimiento (alcance, versión, vigencia)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="is_e7" edge="1" parent="1" source="is_tpp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="is_gw" value="12) Llama con token de alcance limitado">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="is_e8" edge="1" parent="1" source="is_gw" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;startArrow=none;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;fontSize=9;align=center;" target="is_core" value="7-8,13) Valida el token (JWKS cacheado, 11.1) y autoriza por scopes/roles o por el alcance del consentimiento; enruta">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1440.11" y="1210.11" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="is_legend" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=10;" value="&lt;b&gt;Leyenda&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color:#08427B;&quot;&gt;■&lt;/span&gt; Actor&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#9673A6;&quot;&gt;■&lt;/span&gt; Componente IAM&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#6B6B6B;&quot;&gt;■&lt;/span&gt; Contenedor referenciado" vertex="1">
+          <mxGeometry height="30" width="1560" x="20" y="1440" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
